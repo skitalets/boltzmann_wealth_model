@@ -36,8 +36,12 @@ class MoneyAgent(mesa.Agent):
         # The agent's step will go here.
         # For demonstration purposes we will print the agent's unique_id
 
+        self.move()
+
         if self.wealth > 0:
             self.give_money()
+
+        print("I am " + str(self.unique_id) + " and my wealth is " + str(self.wealth) + ".")
 
 class MoneyModel(mesa.Model):
     """A model with some number of agents."""
